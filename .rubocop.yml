@@ -1,0 +1,69 @@
+#inherit_from: .rubocop_todo.yml
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/CommentedKeyword:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/StringConcatenation:
+  Exclude:
+    - "spec/lib/parser_spec.rb"
+
+Style/StderrPuts:
+  Exclude:
+    - "lib/parser.rb"
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Metrics/BlockLength:
+  Max: 80
+
+Metrics/AbcSize:
+  Max: 30
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines_except_namespace
+
+Layout/HashAlignment:
+  Exclude:
+    - "spec/lib/parse_line_spec.rb"
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - "lib/configurator.rb"
